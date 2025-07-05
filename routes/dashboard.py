@@ -7,6 +7,9 @@ from flask import Blueprint, jsonify, request
 
 dashboard_bp = Blueprint('dashboard', __name__)
 
+with open("nfts.json", "r", encoding="utf-8") as f:
+    nft_data = json.load(f)
+
 ARQUIVO_ETAPAS = "etapas_obra.json"
 BACKUP_DIR = "backups"
 
@@ -23,12 +26,10 @@ def criar_backup():
     backup_path = os.path.join(BACKUP_DIR, f"etapas_{timestamp}.json")
     shutil.copy(ARQUIVO_ETAPAS, backup_path)
 
-@dashboard_bp.route('/nfts', methods=['GET'])
-def get_nfts():
-    return jsonify([
-        {"tokenId": 3, "participacao": "8%"},
-        {"tokenId": 7, "participacao": "12%"}
-    ])
+@dashboard_bp.route("/nfts/<email>", methods=["GET"])
+def get_nfts(email):
+    email = email.lower()
+    return jsonify(nft_data.get(email, []))
 
 @dashboard_bp.route('/obra', methods=['GET'])
 def get_status_obra():
