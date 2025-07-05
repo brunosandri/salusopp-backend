@@ -13,7 +13,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv("SECRET_KEY", "salusopp")
 app.config['UPLOAD_FOLDER'] = os.getenv("UPLOAD_FOLDER", "uploads")
 
-CORS(app, origins="http://localhost:8080", supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.register_blueprint(auth_bp)
 app.register_blueprint(dashboard_bp)
