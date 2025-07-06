@@ -1,32 +1,32 @@
 {
   "bpressesteixeira@yahoo.com.br": {
-    "senha": "G9v!x2Lp#Qm7"
+    "senha": "pbkdf2:sha256:600000$yphGJZtXmwF28HzF$4f088c95bbaee6075b528d7ebea601c4433fd7f3e0c5eea6e2a370efb89e09e0"
   },
   "luizhrmotta@hotmail.com": {
-    "senha": "zR4@dJ8p$WyN"
+    "senha": "pbkdf2:sha256:600000$hVGX7kXHL4P7vQDI$d72660c67a10ed33e42026c9f361c6639b8b89e47bb89ad88f57a0e6ac2ee905"
   },
   "ricardo006.usa@hotmail.com": {
-    "senha": "Vt7#uK2e&Bq9"
+    "senha": "pbkdf2:sha256:600000$PU2Smv1kOGw43U5A$a3672a0ce23bfa3e53e1a81260aef7de23b5576486a1cb00ac73d3e9a561e5b6"
   },
   "garibaldigck@gmail.com": {
-    "senha": "hX1$Lp9z%UeM"
+    "senha": "pbkdf2:sha256:600000$inKkGeCoH8eQd5EC$d43f1e2fef0ecf7d46dc71c1ab62d29b13d7d0a49d99a41df34cc5ef66a7a293"
   },
   "witelmar@hotmail.com": {
-    "senha": "qD6*Wa3n!ZrT"
+    "senha": "pbkdf2:sha256:600000$CwEWoFBLxK9AsfV9$472b3d63237ff5bb3a346c2a33c9d9f6c4c1d5d2ae8b06c269b3a30e1e020bc5"
   },
   "fabiotiepolo@gmail.com": {
-    "senha": "Yg8&Km5v@RxL"
+    "senha": "pbkdf2:sha256:600000$9N1alznP52iE5TUP$ddba7dfd33c87e4eb59b6f0c2a4e1a398ff78a7c8a02d30a3876247dbdde556f"
   },
   "sannpinheiro@gmail.com": {
-    "senha": "pL3!Zu6c#NyV"
+    "senha": "pbkdf2:sha256:600000$6cgO3Mk1KfTh3Mwa$ed3e9019b1997d5f2eb1320c291d59b9a3c92cd67c88a9a211ddc4d2e9a9cf8d"
   },
   "edsonlima@me.com": {
-    "senha": "Tm2$Dx7r&VoP"
+    "senha": "pbkdf2:sha256:600000$zEuXjPKFE6X2W9hC$0a326e676e4d4a74ff1c0b2434ae1d46e0e17d3bb609445d40b625ae7f27eb52"
   },
   "cleonicemallmann19@gmail.com": {
-    "senha": "fR9@Wb1q!KeL"
+    "senha": "pbkdf2:sha256:600000$duNnTdz6jl0EshYX$10aa446891acabb67c6dd963e8c7cc1fbbffb90a77e6b4bc77a569f1dc4a52a4"
   },
   "fernandazucatelli@yahoo.com.br": {
-    "senha": "Jc5*Nz4m#UyX"
+    "senha": "pbkdf2:sha256:600000$jvm8qqzhP0gqRUVr$4b456a1ac1fc70aa006c4e4381a9f4716a83d2bb169afbb734c750e2a76834f6"
   }
 }
