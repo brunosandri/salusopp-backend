@@ -1,32 +1,12 @@
-{
-  "luizhrmotta@hotmail.com": [
-    { "tokenId": 10011, "participacao": "16,26%" }
-  ],
-  "fabiotiepolo@gmail.com": [
-    { "tokenId": 10012, "participacao": "16,26%" }
-  ],
-  "bpressesteixeira@yahoo.com.br": [
-    { "tokenId": 10013, "participacao": "12,20%" }
-  ],
-  "garibaldigck@gmail.com": [
-    { "tokenId": 10014, "participacao": "8,13%" }
-  ],
-  "witelmar@hotmail.com": [
-    { "tokenId": 10015, "participacao": "8,13%%" }
-  ],
-  "sannpinheiro@gmail.com": [
-    { "tokenId": 10016, "participacao": "8,13%" }
-  ],
-  "edsonlima@me.com": [
-    { "tokenId": 10017, "participacao": "8,13%" }
-  ],
-  "cleonicemallmann19@gmail.com": [
-    { "tokenId": 10018, "participacao": "8,13%" }
-  ],
-  "fernandazucatelli@yahoo.com.br": [
-    { "tokenId": 10019, "participacao": "8,13%" }
-    ],
-  "ricardo006.usa@hotmail.com": [
-    { "tokenId":1020, "participacao": "6,50%" }
-    ]
-}
+[
+  { "email": "luizhrmotta@hotmail.com", "tokenId": 10011, "participacao": "16,26%" },
+  { "email": "fabiotiepolo@gmail.com", "tokenId": 10012, "participacao": "16,26%" },
+  { "email": "bpressesteixeira@yahoo.com.br", "tokenId": 10013, "participacao": "12,20%" },
+  { "email": "garibaldigck@gmail.com", "tokenId": 10014, "participacao": "8,13%" },
+  { "email": "witelmar@hotmail.com", "tokenId": 10015, "participacao": "8,13%" },
+  { "email": "sannpinheiro@gmail.com", "tokenId": 10016, "participacao": "8,13%" },
+  { "email": "edsonlima@me.com", "tokenId": 10017, "participacao": "8,13%" },
+  { "email": "cleonicemallmann19@gmail.com", "tokenId": 10018, "participacao": "8,13%" },
+  { "email": "fernandazucatelli@yahoo.com.br", "tokenId": 10019, "participacao": "8,13%" },
+  { "email": "ricardo006.usa@hotmail.com", "tokenId": 1020, "participacao": "6,50%" }
+]
