@@ -15,7 +15,7 @@ try:
         raw_data = json.load(f)
 
     usuarios = {
-        email: generate_password_hash(dados["senha"])
+        email: dados["senha"]  # ← NÃO re-hash!
         for email, dados in raw_data.items()
     }
 except Exception as e:
