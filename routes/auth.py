@@ -15,11 +15,11 @@ try:
         raw_data = json.load(f)
 
     usuarios = {
-        email: dados["senha"]  # ← NÃO re-hash!
+        email: dados["senha"]
         for email, dados in raw_data.items()
     }
+
 except Exception as e:
-    print("Erro ao carregar usuários:", e)
     usuarios = {}
 
 # Rota de login
@@ -32,7 +32,7 @@ def login():
 
         if not email or not senha:
             return jsonify({"error": "Email e senha obrigatórios."}), 400
-
+        
         if email in usuarios and check_password_hash(usuarios[email], senha):
             return jsonify({"token": f"fake-token-for-{email}"})
 
