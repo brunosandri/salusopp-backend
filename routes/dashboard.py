@@ -12,7 +12,8 @@ with open("nfts.json", "r", encoding="utf-8") as f:
 
 ARQUIVO_ETAPAS = "etapas_obra.json"
 BACKUP_DIR = "backups"
-NFTS_FILE = os.path.join(os.path.dirname(__file__), "../data/nfts.json")
+BASE_DIR = os.path.dirname(__file__)
+NFTS_FILE = os.path.join(BASE_DIR, "../data/nfts.json")
 DOCUMENTOS_FILE = os.path.join(BASE_DIR, "../data/documentos.json")
 
 def carregar_etapas():
@@ -30,11 +31,14 @@ def criar_backup():
 
 @dashboard_bp.route("/nfts/<email>", methods=["GET"])
 def get_nfts_por_email(email):
-    with open(NFTS_FILE, "r") as f:
-        nfts = json.load(f)
+    try:
+        with open(NFTS_FILE, "r") as f:
+            nfts = json.load(f)
+        nfts_usuario = [n for n in nfts if n["email"] == email]
+        return jsonify(nfts_usuario)
+    except Exception as e:
+        return jsonify({"erro": "Falha ao carregar NFTs", "detalhe": str(e)}), 500
 
-    nfts_usuario = [n for n in nfts if n["email"] == email]
-    return jsonify(nfts_usuario)
 
 @dashboard_bp.route('/obra', methods=['GET'])
 def get_status_obra():
