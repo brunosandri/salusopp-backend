@@ -12,6 +12,8 @@ with open("nfts.json", "r", encoding="utf-8") as f:
 
 ARQUIVO_ETAPAS = "etapas_obra.json"
 BACKUP_DIR = "backups"
+NFTS_FILE = os.path.join(os.path.dirname(__file__), "../data/nfts.json")
+DOCUMENTOS_FILE = os.path.join(BASE_DIR, "../data/documentos.json")
 
 def carregar_etapas():
     try:
@@ -27,9 +29,12 @@ def criar_backup():
     shutil.copy(ARQUIVO_ETAPAS, backup_path)
 
 @dashboard_bp.route("/nfts/<email>", methods=["GET"])
-def get_nfts(email):
-    email = email.lower()
-    return jsonify(nft_data.get(email, []))
+def get_nfts_por_email(email):
+    with open(NFTS_FILE, "r") as f:
+        nfts = json.load(f)
+
+    nfts_usuario = [n for n in nfts if n["email"] == email]
+    return jsonify(nfts_usuario)
 
 @dashboard_bp.route('/obra', methods=['GET'])
 def get_status_obra():
@@ -40,6 +45,19 @@ def adicionar_etapa():
     nova_etapa = request.json
     etapas = carregar_etapas()
     etapas.append(nova_etapa)
+
+@dashboard_bp.route("/documentos/<email>", methods=["GET"])
+def get_documentos(email):
+    try:
+        with open(DOCUMENTOS_FILE, "r") as f:
+            documentos = json.load(f)
+
+        docs_gerais = [doc for doc in documentos if doc["email"] == "geral"]
+        docs_usuario = [doc for doc in documentos if doc["email"] == email]
+
+        return jsonify(docs_gerais + docs_usuario)
+    except Exception as e:
+        return jsonify({"erro": "Falha ao carregar documentos", "detalhe": str(e)}), 500
 
     # Salvar e criar backup
     with open(ARQUIVO_ETAPAS, "w", encoding="utf-8") as f:
