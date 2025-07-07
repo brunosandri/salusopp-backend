@@ -1,9 +1,4 @@
-import json
-from datetime import datetime
-from pathlib import Path
-
-# Conteúdo atualizado do JSON
-etapas_obra = [
+[    
     {
         "titulo": "Fase 0. Compra do Terreno",
         "descricao": "Início: 21/02/2025. Término previsto: 21/03/2025. Término real: 24/03/2025. Diferença: +3 dias."
@@ -29,12 +24,3 @@ etapas_obra = [
         "descricao": "Início: 14/12/2025. Término previsto: 14/02/2026. Término real: - "
     }
 ]
-
-# Caminho para salvar o arquivo
-file_path = Path("/mnt/data/etapas_obra.json")
-
-# Salvar o arquivo
-with file_path.open("w", encoding="utf-8") as f:
-    json.dump(etapas_obra, f, indent=2, ensure_ascii=False)
-
-file_path.name
