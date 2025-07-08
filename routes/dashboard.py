@@ -81,8 +81,10 @@ def vincular_nft():
         email = data.get("email")
         token_id = data.get("tokenId")
         participacao = data.get("participacao")
+        valorinv = data.get("valorinv")
+        valorcapt = data.get("valorcapt")
 
-        if not all([email, token_id, participacao]):
+        if not all([email, token_id, participacao, valorinv, valorcapt]):
             return jsonify({"error": "Campos obrigatórios faltando"}), 400
 
         # Carregar NFTs existentes
@@ -92,7 +94,10 @@ def vincular_nft():
         nfts.append({
             "email": email,
             "tokenId": token_id,
-            "participacao": participacao
+            "participacao": participacao,
+            "valorinv": valorinv,
+            "valorcapt": valorcapt
+
         })
 
         # Salvar no arquivo
